@@ -1,0 +1,233 @@
+{% extends "base.html" %}
+
+{% block title %}Portfolio - Next BRG{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <div class="page-header-content">
+            <h1 class="page-title">Our Portfolio</h1>
+            <p class="page-subtitle">
+                Explore our latest projects and live demonstrations of the solutions we've built for our clients.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Filter -->
+<section class="portfolio-filter">
+    <div class="container">
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="web">Web Development</button>
+            <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+            <button class="filter-btn" data-filter="dashboard">Dashboards</button>
+            <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Grid -->
+<section class="portfolio-section">
+    <div class="container">
+        <div class="portfolio-grid">
+            {% for item in portfolio_items %}
+            <div class="portfolio-item" data-category="web ecommerce">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            {% if 'E-Commerce' in item.title %}
+                                <i class="fas fa-shopping-cart"></i>
+                            {% elif 'Analytics' in item.title %}
+                                <i class="fas fa-chart-bar"></i>
+                            {% elif 'CRM' in item.title %}
+                                <i class="fas fa-users"></i>
+                            {% else %}
+                                <i class="fas fa-laptop-code"></i>
+                            {% endif %}
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-buttons">
+                                <a href="{{ item.demo_url }}" target="_blank" class="portfolio-btn" rel="noopener">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Live Demo
+                                </a>
+                                <button class="portfolio-btn portfolio-btn-secondary" onclick="openProjectModal('{{ item.id }}')">
+                                    <i class="fas fa-info-circle"></i>
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">{{ item.title }}</h3>
+                        <p class="portfolio-description">{{ item.description }}</p>
+                        
+                        <div class="portfolio-tech">
+                            {% for tech in item.technologies %}
+                                <span class="tech-tag">{{ tech }}</span>
+                            {% endfor %}
+                        </div>
+                        
+                        <div class="portfolio-actions">
+                            <a href="{{ item.demo_url }}" target="_blank" class="action-link" rel="noopener">
+                                View Live Demo <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            
+            <!-- Additional static portfolio items -->
+            <div class="portfolio-item" data-category="mobile">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-buttons">
+                                <a href="https://demo4.example.com" target="_blank" class="portfolio-btn" rel="noopener">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Live Demo
+                                </a>
+                                <button class="portfolio-btn portfolio-btn-secondary" onclick="openProjectModal(4)">
+                                    <i class="fas fa-info-circle"></i>
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Fitness Tracking App</h3>
+                        <p class="portfolio-description">Cross-platform mobile app for fitness tracking with social features and AI coaching.</p>
+                        
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">ML Kit</span>
+                        </div>
+                        
+                        <div class="portfolio-actions">
+                            <a href="https://demo4.example.com" target="_blank" class="action-link" rel="noopener">
+                                View Live Demo <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="portfolio-item" data-category="dashboard web">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-buttons">
+                                <a href="https://demo5.example.com" target="_blank" class="portfolio-btn" rel="noopener">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Live Demo
+                                </a>
+                                <button class="portfolio-btn portfolio-btn-secondary" onclick="openProjectModal(5)">
+                                    <i class="fas fa-info-circle"></i>
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Project Management Tool</h3>
+                        <p class="portfolio-description">Comprehensive project management platform with team collaboration and time tracking.</p>
+                        
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                        
+                        <div class="portfolio-actions">
+                            <a href="https://demo5.example.com" target="_blank" class="action-link" rel="noopener">
+                                View Live Demo <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="portfolio-item" data-category="web dashboard">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-buttons">
+                                <a href="https://demo6.example.com" target="_blank" class="portfolio-btn" rel="noopener">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Live Demo
+                                </a>
+                                <button class="portfolio-btn portfolio-btn-secondary" onclick="openProjectModal(6)">
+                                    <i class="fas fa-info-circle"></i>
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">SaaS Marketing Platform</h3>
+                        <p class="portfolio-description">All-in-one marketing automation platform with email campaigns and analytics.</p>
+                        
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">GraphQL</span>
+                            <span class="tech-tag">Redis</span>
+                        </div>
+                        
+                        <div class="portfolio-actions">
+                            <a href="https://demo6.example.com" target="_blank" class="action-link" rel="noopener">
+                                View Live Demo <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Project Modal -->
+<div class="modal-overlay" id="projectModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title" id="modalTitle">Project Details</h3>
+            <button class="modal-close" onclick="closeProjectModal()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="modal-body" id="modalBody">
+            <!-- Project details will be loaded here -->
+        </div>
+    </div>
+</div>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Like What You See?</h2>
+            <p>Let's create something amazing together. Contact us to discuss your project requirements.</p>
+            <div class="cta-buttons">
+                <a href="{{ url_for('contact') }}" class="btn btn-primary btn-large">Start Your Project</a>
+                <a href="{{ url_for('services') }}" class="btn btn-secondary btn-large">Our Services</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

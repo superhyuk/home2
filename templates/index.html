@@ -1,0 +1,244 @@
+{% extends "base.html" %}
+
+{% block title %}Next BRG - Modern Business Solutions{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-container">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Building the Future of 
+                <span class="text-gradient">Digital Business</span>
+            </h1>
+            <p class="hero-subtitle">
+                We create innovative web solutions, mobile applications, and digital experiences 
+                that transform how businesses connect with their customers.
+            </p>
+            <div class="hero-buttons">
+                <a href="{{ url_for('portfolio') }}" class="btn btn-primary">View Our Work</a>
+                <a href="{{ url_for('contact') }}" class="btn btn-secondary">Get Started</a>
+            </div>
+        </div>
+        
+        <div class="hero-visual">
+            <div class="hero-card floating-card">
+                <div class="card-header">
+                    <div class="card-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <span class="card-title">Live Analytics</span>
+                </div>
+                <div class="card-content">
+                    <div class="metric">
+                        <span class="metric-label">Revenue</span>
+                        <span class="metric-value">$847K</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Users</span>
+                        <span class="metric-value">12.4K</span>
+                    </div>
+                    <div class="chart-placeholder"></div>
+                </div>
+            </div>
+            
+            <div class="hero-card floating-card" style="animation-delay: 1s;">
+                <div class="card-header">
+                    <div class="card-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <span class="card-title">Project Status</span>
+                </div>
+                <div class="card-content">
+                    <div class="status-item">
+                        <span class="status-dot green"></span>
+                        <span>API Development</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-dot yellow"></span>
+                        <span>UI Testing</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-dot blue"></span>
+                        <span>Deployment</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Preview Section -->
+<section class="services-preview">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">What We Do</h2>
+            <p class="section-subtitle">
+                We specialize in creating digital solutions that drive business growth 
+                and enhance user experiences.
+            </p>
+        </div>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Web Development</h3>
+                <p>Modern, responsive websites and web applications built with the latest technologies.</p>
+                <a href="{{ url_for('services') }}" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Mobile Apps</h3>
+                <p>Native and cross-platform mobile applications for iOS and Android devices.</p>
+                <a href="{{ url_for('services') }}" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-cloud"></i>
+                </div>
+                <h3>Cloud Solutions</h3>
+                <p>Scalable cloud infrastructure and deployment solutions for modern applications.</p>
+                <a href="{{ url_for('services') }}" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Digital Strategy</h3>
+                <p>Strategic consulting to help businesses leverage technology for growth.</p>
+                <a href="{{ url_for('services') }}" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Preview Section -->
+<section class="portfolio-preview">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">
+                Take a look at some of our recent work and live demonstrations.
+            </p>
+        </div>
+        
+        <div class="portfolio-grid">
+            <div class="portfolio-card">
+                <div class="portfolio-image">
+                    <div class="portfolio-placeholder">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="portfolio-overlay">
+                        <a href="https://demo1.example.com" target="_blank" class="portfolio-btn">Live Demo</a>
+                        <a href="{{ url_for('portfolio') }}" class="portfolio-btn portfolio-btn-secondary">Details</a>
+                    </div>
+                </div>
+                <div class="portfolio-content">
+                    <h3>E-Commerce Platform</h3>
+                    <p>Modern online shopping solution with AI-powered recommendations and real-time analytics.</p>
+                    <div class="portfolio-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">AI/ML</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="portfolio-card">
+                <div class="portfolio-image">
+                    <div class="portfolio-placeholder">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="portfolio-overlay">
+                        <a href="https://demo2.example.com" target="_blank" class="portfolio-btn">Live Demo</a>
+                        <a href="{{ url_for('portfolio') }}" class="portfolio-btn portfolio-btn-secondary">Details</a>
+                    </div>
+                </div>
+                <div class="portfolio-content">
+                    <h3>Analytics Dashboard</h3>
+                    <p>Real-time business intelligence dashboard with interactive data visualization.</p>
+                    <div class="portfolio-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">D3.js</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="portfolio-card">
+                <div class="portfolio-image">
+                    <div class="portfolio-placeholder">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="portfolio-overlay">
+                        <a href="https://demo3.example.com" target="_blank" class="portfolio-btn">Live Demo</a>
+                        <a href="{{ url_for('portfolio') }}" class="portfolio-btn portfolio-btn-secondary">Details</a>
+                    </div>
+                </div>
+                <div class="portfolio-content">
+                    <h3>CRM System</h3>
+                    <p>Customer relationship management system with workflow automation and reporting.</p>
+                    <div class="portfolio-tech">
+                        <span class="tech-tag">Vue.js</span>
+                        <span class="tech-tag">Laravel</span>
+                        <span class="tech-tag">AWS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="portfolio-cta">
+            <a href="{{ url_for('portfolio') }}" class="btn btn-primary">View All Projects</a>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number" data-target="150">0</div>
+                <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="50">0</div>
+                <div class="stat-label">Happy Clients</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="5">0</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="99">0</div>
+                <div class="stat-label">% Client Satisfaction</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Let's discuss how we can help transform your business with modern technology solutions.</p>
+            <div class="cta-buttons">
+                <a href="{{ url_for('contact') }}" class="btn btn-primary btn-large">Get Started Today</a>
+                <a href="{{ url_for('portfolio') }}" class="btn btn-secondary btn-large">View Our Work</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
