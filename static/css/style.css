@@ -169,20 +169,7 @@ p {
     width: 100%;
 }
 
-.nav-cta {
-    background: var(--gradient-primary);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 0.375rem;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
 
-.nav-cta:hover {
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-md);
-}
 
 .nav-toggle {
     display: none;
@@ -277,11 +264,168 @@ p {
     margin-bottom: 2.5rem;
 }
 
+.what-we-do-content {
+    margin: 3rem 0;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.what-we-do-content h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.hero-description {
+    font-size: 1.125rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.hero-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.feature-item {
+    background: rgba(37, 99, 235, 0.1);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-align: center;
+    border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+.technology-flow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.flow-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1.5rem;
+    background: var(--bg-white);
+    border: 2px solid var(--primary-color);
+    border-radius: 1rem;
+    min-width: 150px;
+}
+
+.flow-item i {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.flow-item span {
+    font-weight: 600;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.flow-arrow {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.industry-applications {
+    padding: 4rem 0;
+    background: var(--bg-light);
+}
+
+.industry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.industry-card {
+    background: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.industry-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.industry-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-primary);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.industry-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.industry-card p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
 .hero-buttons {
     display: flex;
     justify-content: center;
     gap: 1rem;
     flex-wrap: wrap;
+}
+
+.demo-status {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(16, 185, 129, 0.9);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
 }
 
 
@@ -328,10 +472,6 @@ p {
 }
 
 /* Services Section */
-.services-preview {
-    padding: 4rem 0;
-    background: var(--bg-white);
-}
 
 .services-grid {
     display: grid;
@@ -414,7 +554,7 @@ p {
 /* Portfolio Section */
 .portfolio-preview {
     padding: 4rem 0;
-    background: var(--bg-light);
+    background: var(--bg-white);
 }
 
 .portfolio-section {
@@ -454,8 +594,14 @@ p {
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 2rem;
+    justify-content: center;
+}
+
+.portfolio-grid .portfolio-card {
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 .portfolio-item {
@@ -854,6 +1000,27 @@ p {
     .hero-buttons {
         justify-content: center;
         flex-direction: row;
+    }
+    
+    .technology-flow {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .flow-arrow {
+        transform: rotate(90deg);
+    }
+    
+    .hero-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .industry-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
     }
     
     .section-title {

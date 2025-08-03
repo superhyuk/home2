@@ -8,79 +8,103 @@
     <div class="container">
         <div class="hero-content-center">
             <h1 class="hero-title">
-                AI-Powered Industrial Safety & 
-                <span class="text-gradient">Risk Prevention</span>
+                AI That Decides on Site,
+                <span class="text-gradient">Instant Industrial Safety Response</span>
             </h1>
             <p class="hero-subtitle">
-                We develop intelligent monitoring systems with advanced AI that detect anomalies, 
-                predict failures, and prevent industrial accidents before they happen.
+                Next-generation industrial safety solutions that analyze IoT sensor data 
+                in real-time on-site with edge AI technology for server-independent instant response
             </p>
-            <div class="hero-buttons">
-                <a href="{{ url_for('portfolio') }}" class="btn btn-primary">View Solutions</a>
-                <a href="{{ url_for('contact') }}" class="btn btn-secondary">Request Demo</a>
+            
+            <div class="what-we-do-content">
+                <h3>What We Do</h3>
+                <p class="hero-description">
+                    We develop AI-powered industrial safety solutions that prevent accidents 
+                    and optimize operational efficiency. Our advanced machine learning and IoT 
+                    technologies work together to detect hazards before they become critical.
+                </p>
+                
+                <div class="hero-features">
+                    <div class="feature-item">• AI Anomaly Detection Systems</div>
+                    <div class="feature-item">• Predictive Analytics Solutions</div>
+                    <div class="feature-item">• Real-time Edge Processing</div>
+                    <div class="feature-item">• IoT Sensor Integration</div>
+                </div>
+            </div>
+            
+            <div class="technology-flow">
+                <div class="flow-item">
+                    <i class="fas fa-microchip"></i>
+                    <span>IoT Sensors</span>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-item">
+                    <i class="fas fa-brain"></i>
+                    <span>Edge AI Processing</span>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-item">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Real-time Analysis</span>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Services Preview Section -->
-<section class="services-preview">
+<!-- Universal Applications Section -->
+<section class="industry-applications">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title">What We Do</h2>
+            <h2 class="section-title">AI Safety Solutions for Any Industry</h2>
             <p class="section-subtitle">
-                We specialize in AI-powered safety solutions that prevent industrial accidents 
-                and optimize operational efficiency through intelligent monitoring.
+                Customized AI edge monitoring systems tailored to various industrial environments
             </p>
         </div>
         
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-brain"></i>
+        <div class="industry-grid">
+            <div class="industry-card">
+                <div class="industry-icon">
+                    <i class="fas fa-industry"></i>
                 </div>
-                <h3>AI Anomaly Detection</h3>
-                <p>Advanced machine learning algorithms that identify potential hazards and equipment failures in real-time.</p>
-                <a href="{{ url_for('services') }}" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                <h3>Manufacturing</h3>
+                <p>Real-time production line monitoring and equipment anomaly detection</p>
             </div>
             
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-chart-line"></i>
+            <div class="industry-card">
+                <div class="industry-icon">
+                    <i class="fas fa-oil-well"></i>
                 </div>
-                <h3>Predictive Analytics</h3>
-                <p>Time series analysis and predictive models that forecast equipment maintenance needs and potential failures.</p>
-                <a href="{{ url_for('services') }}" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                <h3>Energy</h3>
+                <p>Power plant and refinery safety management with predictive maintenance</p>
             </div>
             
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-microchip"></i>
+            <div class="industry-card">
+                <div class="industry-icon">
+                    <i class="fas fa-utensils"></i>
                 </div>
-                <h3>Edge AI Systems</h3>
-                <p>Real-time AI processing at the edge for instant decision-making and immediate response to critical situations.</p>
-                <a href="{{ url_for('services') }}" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                <h3>Food & Beverage</h3>
+                <p>Hygiene management, temperature monitoring, and quality control</p>
             </div>
             
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-network-wired"></i>
+            <div class="industry-card">
+                <div class="industry-icon">
+                    <i class="fas fa-pills"></i>
                 </div>
-                <h3>IoT Integration</h3>
-                <p>Seamless integration of multiple sensors and IoT devices into one unified safety monitoring platform.</p>
-                <a href="{{ url_for('services') }}" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                <h3>Pharmaceutical</h3>
+                <p>Clean room environment management and production process monitoring</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Portfolio Preview Section -->
+<!-- Demo Portfolio Section -->
 <section class="portfolio-preview">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title">Featured Projects</h2>
+            <h2 class="section-title">Live AI Systems in Operation</h2>
             <p class="section-subtitle">
-                Take a look at some of our AI-powered safety solutions and live monitoring systems.
+                Check out the actual dashboards of AI edge monitoring systems currently in operation
             </p>
         </div>
         
@@ -88,20 +112,20 @@
             <div class="portfolio-card">
                 <div class="portfolio-image">
                     <div class="portfolio-placeholder">
+                      
                         <i class="fas fa-thermometer-half"></i>
                     </div>
                     <div class="portfolio-overlay">
-                        <a href="https://demo1.example.com" target="_blank" class="portfolio-btn">Live Demo</a>
-                        <a href="{{ url_for('portfolio') }}" class="portfolio-btn portfolio-btn-secondary">Details</a>
+                        <a href="" target="_blank" class="portfolio-btn">Live Demo</a>
                     </div>
                 </div>
                 <div class="portfolio-content">
-                    <h3>AI Temperature Monitoring</h3>
-                    <p>Intelligent thermal management system with predictive analysis for critical industrial processes.</p>
+                    <h3>Smart Temperature Monitoring</h3>
+                    <p>Edge system that pre-detects temperature anomalies in manufacturing processes through real-time AI analysis</p>
                     <div class="portfolio-tech">
                         <span class="tech-tag">Edge AI</span>
                         <span class="tech-tag">IoT Sensors</span>
-                        <span class="tech-tag">AI/ML</span>
+                        <span class="tech-tag">Real-time</span>
                     </div>
                 </div>
             </div>
@@ -109,47 +133,26 @@
             <div class="portfolio-card">
                 <div class="portfolio-image">
                     <div class="portfolio-placeholder">
+                       
                         <i class="fas fa-wave-square"></i>
                     </div>
                     <div class="portfolio-overlay">
-                        <a href="https://demo2.example.com" target="_blank" class="portfolio-btn">Live Demo</a>
-                        <a href="{{ url_for('portfolio') }}" class="portfolio-btn portfolio-btn-secondary">Details</a>
+                        <a href="https:/nblbeta.site" target="_blank" class="portfolio-btn">Live Demo</a>
                     </div>
                 </div>
                 <div class="portfolio-content">
-                    <h3>Vibration Analysis AI</h3>
-                    <p>Real-time vibration monitoring with AI-powered anomaly detection for rotating machinery.</p>
+                    <h3>Vibration Analysis AI Dashboard</h3>
+                    <p>Real-time system where AI learns vibration patterns of rotating equipment to predict failures</p>
                     <div class="portfolio-tech">
                         <span class="tech-tag">Time Series</span>
-                        <span class="tech-tag">ML Models</span>
-                        <span class="tech-tag">Real-time AI</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="portfolio-card">
-                <div class="portfolio-image">
-                    <div class="portfolio-placeholder">
-                        <i class="fas fa-wind"></i>
-                    </div>
-                    <div class="portfolio-overlay">
-                        <a href="https://demo3.example.com" target="_blank" class="portfolio-btn">Live Demo</a>
-                        <a href="{{ url_for('portfolio') }}" class="portfolio-btn portfolio-btn-secondary">Details</a>
-                    </div>
-                </div>
-                <div class="portfolio-content">
-                    <h3>Smart Gas Detection</h3>
-                    <p>AI-enhanced gas monitoring system with automatic alerts and predictive maintenance scheduling.</p>
-                    <div class="portfolio-tech">
-                        <span class="tech-tag">Gas Sensors</span>
-                        <span class="tech-tag">AI Alerts</span>
-                        <span class="tech-tag">Cloud AI</span>
+                        <span class="tech-tag">Predictive</span>
+                        <span class="tech-tag">Edge Processing</span>
                     </div>
                 </div>
             </div>
         </div>
         
-       
+      
     </div>
 </section>
 
