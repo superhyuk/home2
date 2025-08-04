@@ -70,45 +70,49 @@
                     </div>
                     
                     <div class="architecture-diagram">
-                        <svg viewBox="0 0 400 300" class="diagram-svg">
-                            <!-- Sensor Layer -->
+                        <svg viewBox="0 0 480 360" class="diagram-svg">
+                            <!-- Input Sensors -->
                             <g class="sensor-layer">
-                                <circle cx="60" cy="80" r="12" class="sensor-node" />
-                                <circle cx="120" cy="60" r="12" class="sensor-node" />
-                                <circle cx="180" cy="90" r="12" class="sensor-node" />
-                                <circle cx="240" cy="70" r="12" class="sensor-node" />
-                                <text x="60" y="105" text-anchor="middle" class="node-label">Temp</text>
-                                <text x="120" y="85" text-anchor="middle" class="node-label">Press</text>
-                                <text x="180" y="115" text-anchor="middle" class="node-label">Vibr</text>
-                                <text x="240" y="95" text-anchor="middle" class="node-label">Gas</text>
+                                <text x="40" y="25" class="layer-title">Sensor Network</text>
+                                <circle cx="80" cy="70" r="20" class="sensor-node temperature" />
+                                <circle cx="160" cy="50" r="20" class="sensor-node pressure" />
+                                <circle cx="240" cy="80" r="20" class="sensor-node vibration" />
+                                <circle cx="320" cy="60" r="20" class="sensor-node gas" />
+                                <text x="80" y="110" text-anchor="middle" class="node-label">Temperature</text>
+                                <text x="160" y="90" text-anchor="middle" class="node-label">Pressure</text>
+                                <text x="240" y="120" text-anchor="middle" class="node-label">Vibration</text>
+                                <text x="320" y="100" text-anchor="middle" class="node-label">Gas Detection</text>
                             </g>
                             
-                            <!-- Data Flow -->
+                            <!-- Data Flow Lines -->
                             <g class="data-flow">
-                                <path d="M60 92 Q 150 130 200 150" stroke="#2563eb" stroke-width="2" fill="none" class="flow-line" />
-                                <path d="M120 72 Q 150 130 200 150" stroke="#2563eb" stroke-width="2" fill="none" class="flow-line" />
-                                <path d="M180 102 Q 190 130 200 150" stroke="#2563eb" stroke-width="2" fill="none" class="flow-line" />
-                                <path d="M240 82 Q 220 130 200 150" stroke="#2563eb" stroke-width="2" fill="none" class="flow-line" />
+                                <path d="M80 90 Q 150 140 200 170" stroke="#2563eb" stroke-width="3" fill="none" class="flow-line" opacity="0.8" />
+                                <path d="M160 70 Q 180 140 200 170" stroke="#2563eb" stroke-width="3" fill="none" class="flow-line" opacity="0.8" />
+                                <path d="M240 100 Q 220 140 200 170" stroke="#2563eb" stroke-width="3" fill="none" class="flow-line" opacity="0.8" />
+                                <path d="M320 80 Q 260 140 200 170" stroke="#2563eb" stroke-width="3" fill="none" class="flow-line" opacity="0.8" />
                             </g>
                             
-                            <!-- AI Processing Center -->
+                            <!-- AI Processing Engine -->
                             <g class="ai-center">
-                                <rect x="150" y="140" width="100" height="40" rx="8" class="ai-processor" />
-                                <text x="200" y="165" text-anchor="middle" class="processor-label">AI Engine</text>
+                                <text x="200" y="155" text-anchor="middle" class="layer-title">AI Processing</text>
+                                <rect x="120" y="170" width="160" height="60" rx="15" class="ai-processor" />
+                                <text x="200" y="195" text-anchor="middle" class="processor-label">AI Analytics Engine</text>
+                                <text x="200" y="210" text-anchor="middle" class="processor-sublabel">Machine Learning • Pattern Recognition</text>
                             </g>
                             
-                            <!-- Output Flow -->
-                            <g class="output-flow">
-                                <path d="M200 180 L 320 220" stroke="#10b981" stroke-width="2" fill="none" class="output-line" />
-                                <circle cx="320" cy="220" r="15" class="output-node" />
-                                <text x="320" y="225" text-anchor="middle" class="output-label">Alert</text>
-                            </g>
-                        
-                            <!-- Prediction Flow -->
-                            <g class="prediction-flow">
-                                <path d="M200 180 L 80 220" stroke="#f59e0b" stroke-width="2" fill="none" class="prediction-line" />
-                                <rect x="50" y="210" width="60" height="20" rx="4" class="prediction-node" />
-                                <text x="80" y="223" text-anchor="middle" class="prediction-label">Predict</text>
+                            <!-- Output Systems -->
+                            <g class="output-systems">
+                                <text x="40" y="275" class="layer-title">Response Systems</text>
+                                
+                                <!-- Predictive Maintenance -->
+                                <path d="M140 230 L 100 280" stroke="#f59e0b" stroke-width="3" fill="none" class="prediction-line" />
+                                <rect x="40" y="280" width="120" height="35" rx="8" class="prediction-node" />
+                                <text x="100" y="300" text-anchor="middle" class="output-label">Predictive Maintenance</text>
+                                
+                                <!-- Critical Alerts -->
+                                <path d="M260 230 L 300 280" stroke="#ef4444" stroke-width="3" fill="none" class="alert-line" />
+                                <circle cx="300" cy="295" r="25" class="alert-node" />
+                                <text x="300" y="301" text-anchor="middle" class="output-label">Critical Alert</text>
                             </g>
                         </svg>
                     </div>
@@ -116,15 +120,15 @@
                     <div class="architecture-features">
                         <div class="feature-item">
                             <div class="feature-dot sensor"></div>
-                            <span>Multi-Sensor Input</span>
+                            <span>Multi-Modal Sensor Network</span>
                         </div>
                         <div class="feature-item">
-                            <div class="feature-dot ai"></div>
-                            <span>Real-time Processing</span>
+                            <div class="feature-dot processing"></div>
+                            <span>Advanced AI Processing</span>
                         </div>
                         <div class="feature-item">
                             <div class="feature-dot output"></div>
-                            <span>Intelligent Response</span>
+                            <span>Intelligent Response Systems</span>
                         </div>
                     </div>
                 </div>
@@ -309,74 +313,103 @@
 .diagram-svg {
     width: 100%;
     height: auto;
-    max-height: 300px;
+    max-height: 400px;
+}
+
+.layer-title {
+    font-size: 13px;
+    font-weight: 700;
+    fill: var(--text-dark);
+    opacity: 0.7;
 }
 
 .sensor-node {
-    fill: var(--primary-color);
     stroke: var(--bg-white);
-    stroke-width: 2;
-    animation: sensorPulse 2s infinite;
+    stroke-width: 3;
+    animation: sensorPulse 3s infinite;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
+
+.sensor-node.temperature { fill: #ef4444; }
+.sensor-node.pressure { fill: #3b82f6; }
+.sensor-node.vibration { fill: #8b5cf6; }
+.sensor-node.gas { fill: #10b981; }
 
 .ai-processor {
     fill: var(--primary-color);
-    stroke: var(--border-color);
-    stroke-width: 1;
+    stroke: var(--secondary-color);
+    stroke-width: 2;
+    filter: drop-shadow(0 4px 8px rgba(37, 99, 235, 0.2));
 }
 
-.output-node {
-    fill: var(--accent-color);
+.alert-node {
+    fill: #ef4444;
     stroke: var(--bg-white);
-    stroke-width: 2;
+    stroke-width: 3;
+    filter: drop-shadow(0 3px 6px rgba(239, 68, 68, 0.3));
+    animation: alertPulse 2s infinite;
 }
 
 .prediction-node {
     fill: #f59e0b;
     stroke: var(--border-color);
-    stroke-width: 1;
+    stroke-width: 2;
+    filter: drop-shadow(0 2px 4px rgba(245, 158, 11, 0.3));
 }
 
 .flow-line {
-    stroke-dasharray: 5,5;
+    stroke-dasharray: 8,4;
+    animation: flowAnimation 3s linear infinite;
+}
+
+.alert-line {
+    stroke-dasharray: 6,3;
     animation: flowAnimation 2s linear infinite;
 }
 
-.output-line {
-    stroke-dasharray: 3,3;
-    animation: flowAnimation 1.5s linear infinite;
-}
-
 .prediction-line {
-    stroke-dasharray: 4,4;
+    stroke-dasharray: 5,5;
     animation: flowAnimation 2.5s linear infinite;
 }
 
-.node-label, .processor-label, .output-label, .prediction-label {
+.node-label {
     font-size: 11px;
     fill: var(--text-dark);
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .processor-label {
     fill: white;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 15px;
 }
 
-.output-label, .prediction-label {
+.processor-sublabel {
+    fill: white;
+    font-weight: 500;
     font-size: 10px;
+    opacity: 0.9;
+}
+
+.output-label {
+    font-size: 11px;
     fill: white;
     font-weight: 600;
 }
 
 @keyframes sensorPulse {
-    0%, 100% { r: 12; opacity: 1; }
-    50% { r: 14; opacity: 0.8; }
+    0%, 100% { r: 20; opacity: 1; }
+    50% { r: 24; opacity: 0.8; }
+}
+
+@keyframes alertPulse {
+    0%, 100% { r: 25; opacity: 1; }
+    50% { r: 28; opacity: 0.9; }
 }
 
 @keyframes flowAnimation {
     0% { stroke-dashoffset: 0; }
-    100% { stroke-dashoffset: 10; }
+    100% { stroke-dashoffset: 12; }
 }
 
 .architecture-features {
@@ -402,9 +435,25 @@
     border-radius: 50%;
 }
 
-.feature-dot.sensor { background: var(--primary-color); }
-.feature-dot.ai { background: var(--primary-color); }
-.feature-dot.output { background: var(--accent-color); }
+.feature-dot.sensor { 
+    background: linear-gradient(135deg, #ef4444, #3b82f6, #8b5cf6, #10b981);
+    background-size: 200% 200%;
+    animation: gradientShift 4s ease infinite;
+}
+.feature-dot.processing { 
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+.feature-dot.output { 
+    background: linear-gradient(135deg, #ef4444, #f59e0b);
+    background-size: 200% 200%;
+    animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
 
 .safety-ecosystem {
     padding: 6rem 0;
