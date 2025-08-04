@@ -22,34 +22,40 @@ def services():
 
 @app.route('/portfolio')
 def portfolio():
-    # Sample portfolio data - replace with your actual services/projects
-    portfolio_items = [
+    # AI Safety Solutions data
+    solution_items = [
         {
             'id': 1,
-            'title': 'E-Commerce Platform',
-            'description': 'Modern online shopping solution with AI recommendations',
-            'image': 'portfolio1.jpg',
-            'demo_url': 'https://demo1.example.com',
-            'technologies': ['React', 'Node.js', 'MongoDB', 'AI/ML']
+            'title': 'Temperature Monitoring AI',
+            'description': 'Advanced thermal analysis system with predictive overheating detection for chemical processing facilities',
+            'category': 'anomaly monitoring',
+            'demo_url': 'https://temp-monitor.nextbrg.com',
+            'technologies': ['LSTM Networks', 'Edge AI', 'IoT Sensors', 'TensorRT'],
+            'accuracy': '99.4%',
+            'response_time': '150ms'
         },
         {
             'id': 2,
-            'title': 'Analytics Dashboard',
-            'description': 'Real-time business intelligence and data visualization',
-            'image': 'portfolio2.jpg',
-            'demo_url': 'https://demo2.example.com',
-            'technologies': ['Python', 'D3.js', 'PostgreSQL', 'Docker']
+            'title': 'Pressure Anomaly Detection',
+            'description': 'Real-time pressure monitoring with AI-powered leak detection and burst prediction for pipeline systems',
+            'category': 'anomaly predictive',
+            'demo_url': 'https://pressure-ai.nextbrg.com',
+            'technologies': ['Transformer Models', 'Edge Computing', 'SCADA Integration'],
+            'accuracy': '98.7%',
+            'response_time': '75ms'
         },
         {
             'id': 3,
-            'title': 'CRM System',
-            'description': 'Customer relationship management with automation',
-            'image': 'portfolio3.jpg',
-            'demo_url': 'https://demo3.example.com',
-            'technologies': ['Vue.js', 'Laravel', 'MySQL', 'AWS']
+            'title': 'Multi-Sensor Integration Platform',
+            'description': 'Universal IoT platform connecting 500+ sensor types with unified AI analytics and automated response systems',
+            'category': 'integration monitoring',
+            'demo_url': 'https://multi-sensor.nextbrg.com',
+            'technologies': ['Federated Learning', 'MQTT', 'OPC-UA', 'Kubernetes'],
+            'accuracy': '97.2%',
+            'response_time': '200ms'
         }
     ]
-    return render_template('portfolio.html', portfolio_items=portfolio_items)
+    return render_template('portfolio.html', solution_items=solution_items)
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():

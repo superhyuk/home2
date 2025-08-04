@@ -67,7 +67,7 @@ function hideFlashMessage(message) {
 // Portfolio filter functionality
 function initPortfolioFilter() {
     const filterButtons = document.querySelectorAll('.filter-btn');
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    const solutionItems = document.querySelectorAll('.solution-item, .portfolio-item');
     
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -77,8 +77,8 @@ function initPortfolioFilter() {
             filterButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
             
-            // Filter portfolio items
-            portfolioItems.forEach(item => {
+            // Filter solution items
+            solutionItems.forEach(item => {
                 const categories = item.getAttribute('data-category');
                 
                 if (filter === 'all' || categories.includes(filter)) {
@@ -163,7 +163,7 @@ function initScrollAnimations() {
     
     // Observe elements for animation
     const animateElements = document.querySelectorAll(
-        '.service-card, .portfolio-card, .feature-card, .hero-card'
+        '.service-card, .portfolio-card, .solution-card, .feature-card, .hero-card'
     );
     
     animateElements.forEach(el => {
@@ -193,152 +193,184 @@ function initMobileMenu() {
     }
 }
 
-// Project modal functionality
-function openProjectModal(projectId) {
-    const modal = document.getElementById('projectModal');
+// Solution modal functionality (supports both project and solution modals)
+function openSolutionModal(solutionId) {
+    const modal = document.getElementById('solutionModal') || document.getElementById('projectModal');
     const modalTitle = document.getElementById('modalTitle');
     const modalBody = document.getElementById('modalBody');
     
-    // Project details data
-    const projectDetails = {
+    // Solution details data
+    const solutionDetails = {
         1: {
-            title: 'E-Commerce Platform',
-            description: 'A comprehensive e-commerce solution built with modern technologies and AI-powered features.',
+            title: 'Temperature Monitoring AI',
+            description: 'Advanced thermal analysis system deployed in a major chemical processing facility with 24/7 predictive monitoring.',
             features: [
-                'AI-powered product recommendations',
-                'Real-time inventory management',
-                'Advanced analytics dashboard',
-                'Multi-payment gateway integration',
-                'Mobile-responsive design',
-                'SEO optimization'
+                'Multi-zone temperature analysis',
+                'Predictive overheating detection',
+                'Automated cooling system control',
+                'Emergency alert integration',
+                'Historical trend analysis',
+                'Mobile operator alerts'
             ],
-            technologies: ['React', 'Node.js', 'MongoDB', 'Redis', 'AWS', 'TensorFlow'],
-            demoUrl: 'https://demo1.example.com',
-            timeline: '3 months',
-            client: 'Fashion Retailer Inc.'
+            technologies: ['LSTM Networks', 'Edge AI', 'IoT Sensors', 'TensorRT', 'CUDA', 'Docker'],
+            demoUrl: 'https://temp-monitor.nextbrg.com',
+            timeline: '6 weeks deployment',
+            client: 'ChemCorp Manufacturing',
+            results: {
+                accuracy: '99.4%',
+                responseTime: '150ms',
+                incidentReduction: '87%',
+                uptimeImprovement: '12%'
+            }
         },
         2: {
-            title: 'Analytics Dashboard',
-            description: 'Real-time business intelligence platform with interactive data visualization and reporting.',
+            title: 'Pressure Anomaly Detection',
+            description: 'Real-time pressure monitoring system for critical pipeline infrastructure with AI-powered leak detection.',
             features: [
-                'Real-time data processing',
-                'Interactive charts and graphs',
-                'Custom report generation',
-                'Data export capabilities',
-                'User role management',
-                'API integrations'
+                'Multi-point pressure analysis',
+                'Leak detection algorithms',
+                'Burst prediction models',
+                'SCADA system integration',
+                'Maintenance scheduling',
+                'Regulatory compliance reporting'
             ],
-            technologies: ['Python', 'Django', 'D3.js', 'PostgreSQL', 'Docker', 'Celery'],
-            demoUrl: 'https://demo2.example.com',
-            timeline: '4 months',
-            client: 'Data Corp Ltd.'
+            technologies: ['Transformer Models', 'Edge Computing', 'SCADA Integration', 'InfluxDB', 'Grafana'],
+            demoUrl: 'https://pressure-ai.nextbrg.com',
+            timeline: '8 weeks deployment',
+            client: 'PipelineOps Inc.',
+            results: {
+                accuracy: '98.7%',
+                responseTime: '75ms',
+                leakDetection: '95%',
+                falsePositives: '-89%'
+            }
         },
         3: {
-            title: 'CRM System',
-            description: 'Customer relationship management system with workflow automation and team collaboration features.',
+            title: 'Multi-Sensor Integration Platform',
+            description: 'Universal IoT platform connecting diverse sensor types with unified AI analytics across manufacturing facility.',
             features: [
-                'Contact management',
-                'Sales pipeline tracking',
-                'Email automation',
-                'Task management',
-                'Reporting and analytics',
-                'Third-party integrations'
+                '500+ sensor type support',
+                'Protocol auto-discovery',
+                'Unified data analytics',
+                'Cross-sensor correlation',
+                'Automated response systems',
+                'Scalable edge deployment'
             ],
-            technologies: ['Vue.js', 'Laravel', 'MySQL', 'Redis', 'AWS SES'],
-            demoUrl: 'https://demo3.example.com',
-            timeline: '5 months',
-            client: 'Sales Solutions Inc.'
+            technologies: ['Federated Learning', 'MQTT', 'OPC-UA', 'Kubernetes', 'Apache Kafka', 'Redis'],
+            demoUrl: 'https://multi-sensor.nextbrg.com',
+            timeline: '12 weeks deployment',
+            client: 'MegaFactory Corp.',
+            results: {
+                accuracy: '97.2%',
+                responseTime: '200ms',
+                sensorIntegration: '500+',
+                dataReduction: '73%'
+            }
         },
         4: {
-            title: 'Fitness Tracking App',
-            description: 'Cross-platform mobile application for fitness tracking with social features and AI coaching.',
+            title: 'Smart Temperature Monitoring',
+            description: 'AI-powered thermal monitoring system for chemical processing plant with predictive overheat detection.',
             features: [
-                'Workout tracking',
-                'Social features',
-                'AI coaching recommendations',
-                'Progress analytics',
-                'Wearable device integration',
-                'Nutrition tracking'
+                'Thermal pattern recognition',
+                'Predictive failure analysis',
+                'Automated alert system',
+                'Equipment health scoring',
+                'Energy optimization',
+                'Compliance monitoring'
             ],
-            technologies: ['React Native', 'Firebase', 'ML Kit', 'Google Fit API'],
-            demoUrl: 'https://demo4.example.com',
-            timeline: '6 months',
-            client: 'FitLife Startup'
+            technologies: ['LSTM Networks', 'Edge AI', 'IoT Sensors'],
+            demoUrl: 'https://temp-monitor.nextbrg.com',
+            timeline: '6 weeks',
+            client: 'ProcessChem Ltd.'
         },
         5: {
-            title: 'Project Management Tool',
-            description: 'Comprehensive project management platform with team collaboration and time tracking features.',
+            title: 'Vibration Analysis AI',
+            description: 'Real-time vibration monitoring for rotating machinery with 48-hour failure prediction capability.',
             features: [
-                'Project planning',
-                'Team collaboration',
-                'Time tracking',
-                'Resource management',
-                'Gantt charts',
-                'Reporting'
+                'FFT spectrum analysis',
+                'Bearing fault detection',
+                'Shaft misalignment detection',
+                'Predictive maintenance',
+                'Vibration trending',
+                'Machine health scoring'
             ],
-            technologies: ['Angular', 'Spring Boot', 'PostgreSQL', 'Elasticsearch'],
-            demoUrl: 'https://demo5.example.com',
-            timeline: '4 months',
-            client: 'Project Pro Ltd.'
+            technologies: ['FFT Analysis', 'Time Series AI', 'Edge Processing'],
+            demoUrl: 'https://vibration-ai.nextbrg.com',
+            timeline: '5 weeks',
+            client: 'RotorTech Industries'
         },
         6: {
-            title: 'SaaS Marketing Platform',
-            description: 'All-in-one marketing automation platform with email campaigns and detailed analytics.',
+            title: 'Smart Gas Detection',
+            description: 'Multi-gas AI monitoring system with automatic ventilation control and emergency response integration.',
             features: [
-                'Email marketing',
-                'Campaign automation',
-                'Lead scoring',
-                'A/B testing',
-                'Analytics dashboard',
-                'CRM integration'
+                'Multi-gas detection',
+                'Concentration prediction',
+                'Automatic ventilation control',
+                'Emergency response automation',
+                'Worker safety alerts',
+                'Regulatory compliance'
             ],
-            technologies: ['Next.js', 'GraphQL', 'Redis', 'Stripe API', 'SendGrid'],
-            demoUrl: 'https://demo6.example.com',
-            timeline: '5 months',
-            client: 'Marketing Automation Co.'
+            technologies: ['Multi-Gas Sensors', 'AI Classification', 'Auto Response'],
+            demoUrl: 'https://gas-detection.nextbrg.com',
+            timeline: '7 weeks',
+            client: 'SafeChem Manufacturing'
         }
     };
     
-    const project = projectDetails[projectId];
-    if (!project) return;
+    const solution = solutionDetails[solutionId];
+    if (!solution) return;
     
-    modalTitle.textContent = project.title;
+    modalTitle.textContent = solution.title;
     modalBody.innerHTML = `
-        <div class="project-details">
-            <p class="project-description">${project.description}</p>
+        <div class="solution-details">
+            <p class="solution-description">${solution.description}</p>
             
-            <div class="project-info">
+            <div class="solution-info">
                 <div class="info-item">
-                    <strong>Client:</strong> ${project.client}
+                    <strong>Client:</strong> ${solution.client}
                 </div>
                 <div class="info-item">
-                    <strong>Timeline:</strong> ${project.timeline}
+                    <strong>Timeline:</strong> ${solution.timeline}
                 </div>
                 <div class="info-item">
-                    <strong>Demo:</strong> <a href="${project.demoUrl}" target="_blank" rel="noopener">View Live Demo</a>
+                    <strong>Live System:</strong> <a href="${solution.demoUrl}" target="_blank" rel="noopener">View Live Demo</a>
                 </div>
             </div>
             
-            <div class="project-section">
+            ${solution.results ? `
+            <div class="solution-section">
+                <h4>Performance Results</h4>
+                <div class="results-grid">
+                    ${Object.entries(solution.results).map(([key, value]) => `
+                        <div class="result-item">
+                            <span class="result-value">${value}</span>
+                            <span class="result-label">${key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}</span>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+            ` : ''}
+            
+            <div class="solution-section">
                 <h4>Key Features</h4>
                 <ul class="feature-list">
-                    ${project.features.map(feature => `<li>${feature}</li>`).join('')}
+                    ${solution.features.map(feature => `<li>${feature}</li>`).join('')}
                 </ul>
             </div>
             
-            <div class="project-section">
+            <div class="solution-section">
                 <h4>Technologies Used</h4>
                 <div class="tech-tags">
-                    ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                    ${solution.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
                 </div>
             </div>
             
-            <div class="project-actions">
-                <a href="${project.demoUrl}" target="_blank" class="btn btn-primary" rel="noopener">
+            <div class="solution-actions">
+                <a href="${solution.demoUrl}" target="_blank" class="btn btn-primary" rel="noopener">
                     <i class="fas fa-external-link-alt"></i> View Live Demo
                 </a>
                 <a href="/contact" class="btn btn-secondary">
-                    <i class="fas fa-envelope"></i> Discuss Similar Project
+                    <i class="fas fa-envelope"></i> Request Similar Solution
                 </a>
             </div>
         </div>
@@ -348,24 +380,28 @@ function openProjectModal(projectId) {
     document.body.style.overflow = 'hidden';
 }
 
-function closeProjectModal() {
-    const modal = document.getElementById('projectModal');
+function closeSolutionModal() {
+    const modal = document.getElementById('solutionModal') || document.getElementById('projectModal');
     modal.classList.remove('active');
     document.body.style.overflow = '';
 }
 
+function closeProjectModal() {
+    closeSolutionModal(); // Alias for backward compatibility
+}
+
 // Close modal when clicking outside
 document.addEventListener('click', (e) => {
-    const modal = document.getElementById('projectModal');
+    const modal = document.getElementById('solutionModal') || document.getElementById('projectModal');
     if (e.target === modal) {
-        closeProjectModal();
+        closeSolutionModal();
     }
 });
 
 // Close modal with Escape key
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-        closeProjectModal();
+        closeSolutionModal();
     }
 });
 
@@ -542,18 +578,21 @@ const additionalCSS = `
         margin-top: 0.25rem;
     }
     
-    /* Modal project details styles */
-    .project-details {
+    /* Modal project and solution details styles */
+    .project-details,
+    .solution-details {
         line-height: 1.6;
     }
     
-    .project-description {
+    .project-description,
+    .solution-description {
         font-size: 1.125rem;
         margin-bottom: 1.5rem;
         color: var(--text-light);
     }
     
-    .project-info {
+    .project-info,
+    .solution-info {
         background: var(--bg-light);
         padding: 1rem;
         border-radius: 0.5rem;
@@ -568,11 +607,13 @@ const additionalCSS = `
         margin-bottom: 0;
     }
     
-    .project-section {
+    .project-section,
+    .solution-section {
         margin-bottom: 1.5rem;
     }
     
-    .project-section h4 {
+    .project-section h4,
+    .solution-section h4 {
         color: var(--text-dark);
         margin-bottom: 0.75rem;
         font-size: 1.125rem;
@@ -603,16 +644,49 @@ const additionalCSS = `
         gap: 0.5rem;
     }
     
-    .project-actions {
+    .project-actions,
+    .solution-actions {
         display: flex;
         gap: 1rem;
         margin-top: 2rem;
         flex-wrap: wrap;
     }
     
-    .project-actions .btn {
+    .project-actions .btn,
+    .solution-actions .btn {
         flex: 1;
         min-width: 150px;
+    }
+    
+    /* Solution-specific styles */
+    .results-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .result-item {
+        text-align: center;
+        background: var(--bg-light);
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border: 1px solid var(--border-color);
+    }
+    
+    .result-value {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: var(--primary-color);
+        margin-bottom: 0.25rem;
+    }
+    
+    .result-label {
+        font-size: 0.75rem;
+        color: var(--text-light);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
     }
     
     /* Scroll to top button */

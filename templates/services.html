@@ -1,229 +1,314 @@
 {% extends "base.html" %}
 
-{% block title %}Our Services - Next BRG{% endblock %}
+{% block title %}AI Technologies - Next BRG{% endblock %}
 
 {% block content %}
 <!-- Page Header -->
 <section class="page-header">
     <div class="container">
         <div class="page-header-content">
-            <h1 class="page-title">Our Services</h1>
+            <h1 class="page-title">Advanced AI Technologies</h1>
             <p class="page-subtitle">
-                We offer comprehensive digital solutions tailored to your business needs. 
-                From concept to deployment, we're your trusted technology partner.
+                Cutting-edge artificial intelligence systems that revolutionize industrial safety 
+                through real-time monitoring, predictive analytics, and intelligent automation.
             </p>
         </div>
     </div>
 </section>
 
-<!-- Services Overview -->
-<section class="services-overview">
+<!-- Technology Overview -->
+<section class="technology-overview">
     <div class="container">
-        <div class="services-intro">
-            <h2>What We Do Best</h2>
+        <div class="tech-intro">
+            <h2>AI-Powered Industrial Safety</h2>
             <p>
-                Our team combines technical expertise with creative vision to deliver 
-                solutions that not only work flawlessly but also provide exceptional 
-                user experiences and drive business growth.
+                Our AI systems process millions of sensor data points in real-time, identifying 
+                patterns invisible to human operators and preventing industrial accidents before they occur.
             </p>
         </div>
         
-        <div class="services-grid">
-            <div class="service-card featured">
-                <div class="service-header">
-                    <div class="service-icon">
-                        <i class="fas fa-code"></i>
+        <div class="tech-grid">
+            <div class="tech-card primary-tech">
+                <div class="tech-header">
+                    <div class="tech-icon">
+                        <i class="fas fa-brain"></i>
                     </div>
-                    <div class="service-badge">Most Popular</div>
+                    <div class="tech-badge">Core Technology</div>
                 </div>
-                <h3>Web Development</h3>
-                <p class="service-description">
-                    Custom websites and web applications built with modern technologies 
-                    for optimal performance and user experience.
+                <h3>AI Anomaly Detection</h3>
+                <p class="tech-description">
+                    Deep learning neural networks that analyze complex multi-dimensional sensor data 
+                    to identify anomalies with 99.7% accuracy in real-time.
                 </p>
-                <ul class="service-features">
-                    <li>Responsive Design</li>
-                    <li>E-commerce Solutions</li>
-                    <li>CMS Development</li>
-                    <li>API Integration</li>
-                    <li>Performance Optimization</li>
+                <ul class="tech-features">
+                    <li>Multi-dimensional Pattern Recognition</li>
+                    <li>Self-learning Neural Networks</li>
+                    <li>Real-time Anomaly Scoring</li>
+                    <li>False Positive Reduction</li>
+                    <li>Continuous Model Improvement</li>
                 </ul>
-                <div class="service-pricing">
-                    <span class="price-from">Starting from</span>
-                    <span class="price">$5,000</span>
-                </div>
-                <a href="{{ url_for('contact') }}" class="btn btn-primary">Get Started</a>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-header">
-                    <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
+                <div class="tech-metrics">
+                    <div class="metric">
+                        <span class="metric-value">99.7%</span>
+                        <span class="metric-label">Accuracy</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-value">&lt;100ms</span>
+                        <span class="metric-label">Detection Speed</span>
                     </div>
                 </div>
-                <h3>Mobile App Development</h3>
-                <p class="service-description">
-                    Native and cross-platform mobile applications for iOS and Android 
-                    that engage users and drive business results.
-                </p>
-                <ul class="service-features">
-                    <li>iOS & Android Apps</li>
-                    <li>Cross-platform Solutions</li>
-                    <li>UI/UX Design</li>
-                    <li>App Store Deployment</li>
-                    <li>Maintenance & Support</li>
-                </ul>
-                <div class="service-pricing">
-                    <span class="price-from">Starting from</span>
-                    <span class="price">$15,000</span>
-                </div>
-                <a href="{{ url_for('contact') }}" class="btn btn-secondary">Learn More</a>
             </div>
             
-            <div class="service-card">
-                <div class="service-header">
-                    <div class="service-icon">
-                        <i class="fas fa-cloud"></i>
-                    </div>
-                </div>
-                <h3>Cloud Solutions</h3>
-                <p class="service-description">
-                    Scalable cloud infrastructure and deployment solutions that grow 
-                    with your business and ensure reliable performance.
-                </p>
-                <ul class="service-features">
-                    <li>Cloud Migration</li>
-                    <li>DevOps & CI/CD</li>
-                    <li>Server Management</li>
-                    <li>Database Design</li>
-                    <li>Security & Monitoring</li>
-                </ul>
-                <div class="service-pricing">
-                    <span class="price-from">Starting from</span>
-                    <span class="price">$3,000</span>
-                </div>
-                <a href="{{ url_for('contact') }}" class="btn btn-secondary">Learn More</a>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-header">
-                    <div class="service-icon">
+            <div class="tech-card">
+                <div class="tech-header">
+                    <div class="tech-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
                 </div>
-                <h3>Digital Strategy</h3>
-                <p class="service-description">
-                    Strategic consulting to help businesses leverage technology for 
-                    growth, efficiency, and competitive advantage.
+                <h3>Time Series AI Analysis</h3>
+                <p class="tech-description">
+                    Advanced temporal pattern recognition that learns from historical data 
+                    to predict equipment failures up to 72 hours in advance.
                 </p>
-                <ul class="service-features">
-                    <li>Technology Consulting</li>
-                    <li>Digital Transformation</li>
-                    <li>Process Optimization</li>
-                    <li>Technology Audits</li>
-                    <li>Strategic Planning</li>
+                <ul class="tech-features">
+                    <li>Long Short-Term Memory (LSTM) Networks</li>
+                    <li>Seasonal Pattern Detection</li>
+                    <li>Multi-variate Time Series Analysis</li>
+                    <li>Predictive Maintenance Scheduling</li>
+                    <li>Trend Anomaly Detection</li>
                 </ul>
-                <div class="service-pricing">
-                    <span class="price-from">Starting from</span>
-                    <span class="price">$2,500</span>
+                <div class="tech-metrics">
+                    <div class="metric">
+                        <span class="metric-value">94.8%</span>
+                        <span class="metric-label">Prediction Rate</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-value">72hrs</span>
+                        <span class="metric-label">Forecast Window</span>
+                    </div>
                 </div>
-                <a href="{{ url_for('contact') }}" class="btn btn-secondary">Learn More</a>
+            </div>
+            
+            <div class="tech-card">
+                <div class="tech-header">
+                    <div class="tech-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                </div>
+                <h3>Edge AI Processing</h3>
+                <p class="tech-description">
+                    Ultra-low latency AI inference directly on industrial hardware, 
+                    enabling instant decision-making without network dependency.
+                </p>
+                <ul class="tech-features">
+                    <li>TensorRT Optimized Models</li>
+                    <li>FPGA Acceleration</li>
+                    <li>Offline Operation Capability</li>
+                    <li>Industrial Grade Hardware</li>
+                    <li>Real-time Model Updates</li>
+                </ul>
+                <div class="tech-metrics">
+                    <div class="metric">
+                        <span class="metric-value">&lt;3ms</span>
+                        <span class="metric-label">Latency</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-value">24/7</span>
+                        <span class="metric-label">Uptime</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tech-card">
+                <div class="tech-header">
+                    <div class="tech-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                </div>
+                <h3>Universal IoT Integration</h3>
+                <p class="tech-description">
+                    Seamlessly connects diverse sensor types and protocols into one 
+                    intelligent monitoring ecosystem with automatic device discovery.
+                </p>
+                <ul class="tech-features">
+                    <li>500+ Supported Sensor Types</li>
+                    <li>Protocol Auto-Discovery</li>
+                    <li>Modbus, OPC-UA, MQTT Support</li>
+                    <li>Legacy System Integration</li>
+                    <li>Plug-and-Play Deployment</li>
+                </ul>
+                <div class="tech-metrics">
+                    <div class="metric">
+                        <span class="metric-value">500+</span>
+                        <span class="metric-label">Sensor Types</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-value">99.9%</span>
+                        <span class="metric-label">Connectivity</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Process Section -->
-<section class="process-section">
+<!-- AI Implementation Process -->
+<section class="implementation-process">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title">Our Development Process</h2>
+            <h2 class="section-title">AI Implementation Process</h2>
             <p class="section-subtitle">
-                A proven methodology that ensures quality, transparency, and successful project delivery.
+                Our systematic approach to deploying AI-powered safety systems in industrial environments.
             </p>
         </div>
         
         <div class="process-steps">
             <div class="process-step">
                 <div class="step-icon">
-                    <i class="fas fa-search"></i>
+                    <i class="fas fa-clipboard-list"></i>
                 </div>
                 <div class="step-content">
-                    <h3>1. Discovery</h3>
-                    <p>We analyze your business needs, target audience, and technical requirements to create a comprehensive project roadmap.</p>
+                    <h3>1. Safety Assessment</h3>
+                    <p>Comprehensive analysis of your facility's safety requirements, existing sensors, and potential risk points to design the optimal AI monitoring system.</p>
                 </div>
             </div>
             
             <div class="process-step">
                 <div class="step-icon">
-                    <i class="fas fa-pencil-ruler"></i>
+                    <i class="fas fa-cog"></i>
                 </div>
                 <div class="step-content">
-                    <h3>2. Design</h3>
-                    <p>Our design team creates wireframes, prototypes, and visual designs that prioritize user experience and your brand identity.</p>
+                    <h3>2. System Configuration</h3>
+                    <p>Custom AI model training using your facility's historical data and sensor configurations to ensure maximum accuracy and minimal false positives.</p>
                 </div>
             </div>
             
             <div class="process-step">
                 <div class="step-icon">
-                    <i class="fas fa-code"></i>
+                    <i class="fas fa-microchip"></i>
                 </div>
                 <div class="step-content">
-                    <h3>3. Development</h3>
-                    <p>We build your solution using best practices, clean code, and rigorous testing to ensure quality and performance.</p>
+                    <h3>3. Edge AI Deployment</h3>
+                    <p>Installation of edge AI hardware and sensor integration with rigorous testing to ensure reliable operation in industrial conditions.</p>
                 </div>
             </div>
             
             <div class="process-step">
                 <div class="step-icon">
-                    <i class="fas fa-rocket"></i>
+                    <i class="fas fa-shield-alt"></i>
                 </div>
                 <div class="step-content">
-                    <h3>4. Launch</h3>
-                    <p>We deploy your project, provide training, and offer ongoing support to ensure long-term success.</p>
+                    <h3>4. Live Monitoring</h3>
+                    <p>24/7 AI-powered monitoring with continuous learning and model optimization, plus comprehensive operator training and ongoing support.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
+<!-- Technology Specifications -->
+<section class="tech-specifications">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Technical Specifications</h2>
+            <p class="section-subtitle">
+                Enterprise-grade AI infrastructure designed for mission-critical industrial applications.
+            </p>
+        </div>
+        
+        <div class="spec-categories">
+            <div class="spec-category">
+                <h3>AI Models & Algorithms</h3>
+                <div class="spec-grid">
+                    <div class="spec-item">
+                        <div class="spec-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4>Deep Neural Networks</h4>
+                        <p>Convolutional and recurrent neural networks optimized for time-series anomaly detection</p>
+                    </div>
+                    
+                    <div class="spec-item">
+                        <div class="spec-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h4>Ensemble Methods</h4>
+                        <p>Multiple ML algorithms working together to improve prediction accuracy and reduce false positives</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="spec-category">
+                <h3>Hardware & Infrastructure</h3>
+                <div class="spec-grid">
+                    <div class="spec-item">
+                        <div class="spec-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h4>Edge Computing</h4>
+                        <p>Industrial-grade edge devices with GPU acceleration for real-time AI inference</p>
+                    </div>
+                    
+                    <div class="spec-item">
+                        <div class="spec-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h4>Data Processing</h4>
+                        <p>High-throughput data ingestion and processing pipeline handling 10,000+ signals per second</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-
-
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Ready to Transform Your Industrial Safety?</h2>
+            <p>Get a personalized demonstration of our AI technologies and see how they can protect your facility.</p>
+            <div class="cta-buttons">
+                <a href="{{ url_for('contact') }}" class="btn btn-primary btn-large">Request Live Demo</a>
+                <a href="{{ url_for('portfolio') }}" class="btn btn-secondary btn-large">View Case Studies</a>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- Additional CSS for Services page -->
 <style>
-.services-overview {
+.technology-overview {
     padding: 6rem 0;
     background: var(--bg-white);
 }
 
-.services-intro {
+.tech-intro {
     text-align: center;
     max-width: 800px;
     margin: 0 auto 4rem;
 }
 
-.services-intro h2 {
+.tech-intro h2 {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
     color: var(--text-dark);
 }
 
-.services-intro p {
+.tech-intro p {
     font-size: 1.125rem;
     color: var(--text-light);
     line-height: 1.7;
 }
 
-.services-grid {
+.tech-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
-.service-card {
+.tech-card {
     background: var(--bg-white);
     border: 1px solid var(--border-color);
     border-radius: 1rem;
@@ -235,30 +320,30 @@
     flex-direction: column;
 }
 
-.service-card.featured {
+.tech-card.primary-tech {
     border-color: var(--primary-color);
     box-shadow: 0 8px 25px rgba(37, 99, 235, 0.15);
     transform: scale(1.02);
 }
 
-.service-card:hover {
+.tech-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-xl);
     border-color: var(--primary-color);
 }
 
-.service-card.featured:hover {
+.tech-card.primary-tech:hover {
     transform: scale(1.02) translateY(-5px);
 }
 
-.service-header {
+.tech-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 1.5rem;
 }
 
-.service-icon {
+.tech-icon {
     width: 60px;
     height: 60px;
     background: var(--gradient-primary);
@@ -270,7 +355,7 @@
     font-size: 1.5rem;
 }
 
-.service-badge {
+.tech-badge {
     background: var(--accent-color);
     color: white;
     padding: 0.25rem 0.75rem;
@@ -279,33 +364,33 @@
     font-weight: 600;
 }
 
-.service-card h3 {
+.tech-card h3 {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
     color: var(--text-dark);
 }
 
-.service-description {
+.tech-description {
     color: var(--text-light);
     margin-bottom: 1.5rem;
     line-height: 1.6;
 }
 
-.service-features {
+.tech-features {
     list-style: none;
     margin-bottom: 2rem;
     flex: 1;
 }
 
-.service-features li {
+.tech-features li {
     padding: 0.5rem 0;
     padding-left: 1.5rem;
     position: relative;
     color: var(--text-light);
 }
 
-.service-features li::before {
+.tech-features li::before {
     content: '✓';
     position: absolute;
     left: 0;
@@ -313,77 +398,48 @@
     font-weight: bold;
 }
 
-.service-pricing {
+.tech-metrics {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 1.5rem;
-    text-align: center;
+    gap: 1rem;
 }
 
-.price-from {
+.metric {
+    text-align: center;
+    flex: 1;
+}
+
+.metric-value {
     display: block;
-    color: var(--text-light);
-    font-size: 0.875rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary-color);
     margin-bottom: 0.25rem;
 }
 
-.price {
-    font-size: 2rem;
-    font-weight: 800;
-    color: var(--primary-color);
+.metric-label {
+    color: var(--text-light);
+    font-size: 0.875rem;
 }
 
-.process-section {
+.implementation-process {
     padding: 6rem 0;
     background: var(--bg-light);
 }
 
-.process-steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-.process-step {
-    text-align: center;
-    padding: 2rem;
-}
-
-.step-icon {
-    width: 80px;
-    height: 80px;
-    background: var(--gradient-primary);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1.5rem;
-    color: white;
-    font-size: 1.5rem;
-}
-
-.step-content h3 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: var(--text-dark);
-}
-
-.step-content p {
-    color: var(--text-light);
-    line-height: 1.6;
-}
-
-.technology-section {
+.tech-specifications {
     padding: 6rem 0;
     background: var(--bg-white);
 }
 
-.tech-categories {
+.spec-categories {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 3rem;
 }
 
-.tech-category h3 {
+.spec-category h3 {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
@@ -391,143 +447,68 @@
     text-align: center;
 }
 
-.tech-grid {
+.spec-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
 }
 
-.tech-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
+.spec-item {
     background: var(--bg-light);
     border: 1px solid var(--border-color);
     border-radius: 0.75rem;
+    padding: 1.5rem;
     transition: all 0.3s ease;
-    text-align: center;
 }
 
-.tech-item:hover {
+.spec-item:hover {
     transform: translateY(-3px);
     border-color: var(--primary-color);
     box-shadow: var(--shadow-md);
 }
 
-.tech-item i {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-}
-
-.tech-item span {
-    font-weight: 600;
-    color: var(--text-dark);
-    font-size: 0.875rem;
-}
-
-.testimonials-section {
-    padding: 6rem 0;
-    background: var(--bg-light);
-}
-
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.testimonial-card {
-    background: var(--bg-white);
-    border: 1px solid var(--border-color);
-    border-radius: 1rem;
-    padding: 2rem;
-    transition: all 0.3s ease;
-}
-
-.testimonial-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
-    border-color: var(--primary-color);
-}
-
-.testimonial-content {
-    margin-bottom: 1.5rem;
-}
-
-.quote-icon {
-    color: var(--primary-color);
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.testimonial-content p {
-    color: var(--text-light);
-    line-height: 1.6;
-    font-style: italic;
-}
-
-.testimonial-author {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.author-avatar {
+.spec-icon {
     width: 50px;
     height: 50px;
-    background: var(--bg-light);
-    border-radius: 50%;
+    background: var(--gradient-primary);
+    border-radius: 0.75rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--text-muted);
+    color: white;
     font-size: 1.25rem;
+    margin-bottom: 1rem;
 }
 
-.author-info h4 {
-    font-size: 1rem;
+.spec-item h4 {
+    font-size: 1.125rem;
     font-weight: 600;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
     color: var(--text-dark);
 }
 
-.author-info span {
+.spec-item p {
     color: var(--text-light);
-    font-size: 0.875rem;
+    line-height: 1.5;
+    font-size: 0.9rem;
 }
 
 @media (max-width: 768px) {
-    .services-grid {
+    .tech-grid {
         grid-template-columns: 1fr;
     }
     
-    .service-card.featured {
+    .tech-card.primary-tech {
         transform: none;
     }
     
-    .service-card.featured:hover {
+    .tech-card.primary-tech:hover {
         transform: translateY(-5px);
     }
     
-    .process-steps {
-        grid-template-columns: 1fr;
-    }
-    
-    .tech-categories {
+    .spec-categories {
         grid-template-columns: 1fr;
         gap: 2rem;
-    }
-    
-    .tech-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    .tech-grid {
-        grid-template-columns: repeat(2, 1fr);
     }
 }
 </style>
